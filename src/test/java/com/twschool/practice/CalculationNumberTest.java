@@ -69,7 +69,7 @@ public class CalculationNumberTest {
     }
 
     @Test
-    public void should_return_4A0B_when_getPromptByCalculation_answer_is_1234_and_input_is_1234(){
+    public void should_return_1A2B_when_getPromptByCalculation_answer_is_1234_and_input_is_1429(){
         //given
         int[] answer= new int[4];
         answer[0] = 1;
@@ -78,9 +78,9 @@ public class CalculationNumberTest {
         answer[3] = 4;
         int[] input= new int[4];
         input[0] = 1;
-        input[1] = 2;
-        input[2] = 3;
-        input[3] = 4;
+        input[1] = 4;
+        input[2] = 2;
+        input[3] = 9;
         CalculationNumber calculationNumber = new CalculationNumber();
         calculationNumber.setAnswerNumber(answer);
 
@@ -88,6 +88,6 @@ public class CalculationNumberTest {
         String output = calculationNumber.getPromptByCalculation(input);
 
         //then
-        assertThat(output, is("4A0B"));
+        assertThat(output, is("1A2B"));
     }
 }
