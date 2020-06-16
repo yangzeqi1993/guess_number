@@ -45,4 +45,49 @@ public class CalculationNumberTest {
         assertThat(output, is("0A0B"));
     }
 
+    @Test
+    public void should_return_4A0B_when_getPromptByCalculation_answer_is_1234_and_input_is_1234(){
+        //given
+        int[] answer= new int[4];
+        answer[0] = 1;
+        answer[1] = 2;
+        answer[2] = 3;
+        answer[3] = 4;
+        int[] input= new int[4];
+        input[0] = 1;
+        input[1] = 2;
+        input[2] = 3;
+        input[3] = 4;
+        CalculationNumber calculationNumber = new CalculationNumber();
+        calculationNumber.setAnswerNumber(answer);
+
+        //when
+        String output = calculationNumber.getPromptByCalculation(input);
+
+        //then
+        assertThat(output, is("4A0B"));
+    }
+
+    @Test
+    public void should_return_4A0B_when_getPromptByCalculation_answer_is_1234_and_input_is_1234(){
+        //given
+        int[] answer= new int[4];
+        answer[0] = 1;
+        answer[1] = 2;
+        answer[2] = 3;
+        answer[3] = 4;
+        int[] input= new int[4];
+        input[0] = 1;
+        input[1] = 2;
+        input[2] = 3;
+        input[3] = 4;
+        CalculationNumber calculationNumber = new CalculationNumber();
+        calculationNumber.setAnswerNumber(answer);
+
+        //when
+        String output = calculationNumber.getPromptByCalculation(input);
+
+        //then
+        assertThat(output, is("4A0B"));
+    }
 }

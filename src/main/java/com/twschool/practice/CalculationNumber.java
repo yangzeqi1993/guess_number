@@ -60,6 +60,7 @@ public class CalculationNumber {
                     numB++;
                     if(i == j){
                         numA++;
+                        numB--;
                     }
                 }
             }
