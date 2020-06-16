@@ -90,4 +90,27 @@ public class CalculationNumberTest {
         //then
         assertThat(output, is("1A2B"));
     }
+
+    @Test
+    public void should_return_0A2B_when_getPromptByCalculation_answer_is_1234_and_input_is_8429(){
+        //given
+        int[] answer= new int[4];
+        answer[0] = 1;
+        answer[1] = 2;
+        answer[2] = 3;
+        answer[3] = 4;
+        int[] input= new int[4];
+        input[0] = 8;
+        input[1] = 4;
+        input[2] = 2;
+        input[3] = 9;
+        CalculationNumber calculationNumber = new CalculationNumber();
+        calculationNumber.setAnswerNumber(answer);
+
+        //when
+        String output = calculationNumber.getPromptByCalculation(input);
+
+        //then
+        assertThat(output, is("0A2B"));
+    }
 }
